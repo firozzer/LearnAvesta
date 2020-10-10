@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="theme-color" content="#708090">
+    
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="icon" href="/img/logo192.png"> not sure what this is for, decomment if probs -->
+    <!-- iOS support, snce iOS doesn't pick the logo from manifest file, have to give it specially here & also the theme specially to be given -->
+    <link rel="apple-touch-icon" href="/img/iLogo72.png"> <!--It will automatically choose whatever icon it deems fit -->
+    <link rel="apple-touch-icon" href="/img/iLogo96.png">
+    <link rel="apple-touch-icon" href="/img/iLogo128.png"> 
+    <link rel="apple-touch-icon" href="/img/iLogo144.png"> 
+    <link rel="apple-touch-icon" href="/img/iLogo152.png"> 
+    <link rel="apple-touch-icon" href="/img/iLogo192.png"> 
+    <link rel="apple-touch-icon" href="/img/iLogo384.png"> 
+    <link rel="apple-touch-icon" href="/img/iLogo512.png"> 
+    <meta name="apple-mobile-web-app-status-bar" content="#708090">
+    <title>Learn Avesta Alphabets</title>
+</head>
+<script src="js/app.js"></script>
+
+<a href="pages/game.html" class="btn-floating waves-effect waves-light red"><i class="material-icons">videogame_asset</i></a>
+<img src="img/avestaLetters/1.png" class="fade-in" alt="Alphabet Photo" id="avestaLetter"> 
+<div hidden class="answers fade-in" id="div-trs">
+    <p id="transcription-heading"><b>Transcription:</b></p>
+    <img src="img/transcpAnswers/1.png" class="scale-transition scale-out" id="transcription-answer"> 
+</div>
+
+<div hidden class="answers fade-in" id="div-pro">
+    <p id="pronunciation-heading"><b>Pronunciation:</b></p>
+    <p class="pronunciation-answer" hidden id="ans1">critic<u>al</u></p>
+    <p class="pronunciation-answer" hidden id="ans2">f<u>a</u>ther</p>
+    <p class="pronunciation-answer" hidden id="ans3"><u>i</u>t</p>
+    <p class="pronunciation-answer" hidden id="ans4">f<u>ee</u>t</p>
+    <p class="pronunciation-answer" hidden id="ans5">p<u>u</u>t</p>
+    <p class="pronunciation-answer" hidden id="ans6">sh<u>oo</u>t</p>
+    <p class="pronunciation-answer" hidden id="ans7"><u>k</u>ite</p>
+    <p class="pronunciation-answer" hidden id="ans8"><u>Kh</u>an</p>
+    <p class="pronunciation-answer" hidden id="ans9"><u>kh</u>yal</p>
+    <p class="pronunciation-answer" hidden id="ans10"><u>khv</u>āb</p>
+    <p class="pronunciation-answer" hidden id="ans11"><u>g</u>irl</p>
+    <p class="pronunciation-answer" hidden id="ans12"><u>Gh</u>ana</p>
+    <p class="pronunciation-answer" hidden id="ans13">g<u>o</u>ing</p>
+    <p class="pronunciation-answer" hidden id="ans14">g<u>o</u></p>
+    <p class="pronunciation-answer" hidden id="ans15">s<u>a</u>ve</p>
+    <p class="pronunciation-answer" hidden id="ans16">s<u>ay</u></p>
+    <p class="pronunciation-answer" hidden id="ans17">ba<u>th</u></p>
+    <p class="pronunciation-answer" hidden id="ans18"><u>d</u>ay</p>
+    <p class="pronunciation-answer" hidden id="ans19">a<u>dh</u>ere</p>
+    <p class="pronunciation-answer" hidden id="ans20"><u>r</u>un</p>
+    <p class="pronunciation-answer" hidden id="ans21"><u>f</u>an</p>
+    <p class="pronunciation-answer" hidden id="ans22"><u>b</u>at</p>
+    <p class="pronunciation-answer" hidden id="ans23"><u>t</u>en</p>
+    <p class="pronunciation-answer" hidden id="ans24">pu<u>t</u></p>
+    <p class="pronunciation-answer" hidden id="ans25">r<u>e</u>d</p>
+    <p class="pronunciation-answer" hidden id="ans26">r<u>e</u>d</p>
+    <p class="pronunciation-answer" hidden id="ans27">b<u>ere</u>t</p>
+    <p class="pronunciation-answer" hidden id="ans28"><u>ch</u>air</p>
+    <p class="pronunciation-answer" hidden id="ans29"><u>j</u>am</p>
+    <p class="pronunciation-answer" hidden id="ans30"><u>n</u>ut</p>
+    <p class="pronunciation-answer" hidden id="ans31">gru<u>nt</u></p>
+    <p class="pronunciation-answer" hidden id="ans32"><u>m</u>an</p>
+    <p class="pronunciation-answer" hidden id="ans33">so<u>ng</u></p>
+    <p class="pronunciation-answer" hidden id="ans34">playi<u>ng</u></p>
+    <p class="pronunciation-answer" hidden id="ans35"><u>p</u>an</p>
+    <p class="pronunciation-answer" hidden id="ans36"><u>h</u>en</p>
+    <p class="pronunciation-answer" hidden id="ans37"><u>w</u>ater</p>
+    <p class="pronunciation-answer" hidden id="ans38"><u>c</u>ow</p>
+    <p class="pronunciation-answer" hidden id="ans39">Fr<u>an</u>ce</p>
+    <p class="pronunciation-answer" hidden id="ans40">law<u>y</u>er</p>
+    <p class="pronunciation-answer" hidden id="ans41"><u>y</u>es</p>
+    <p class="pronunciation-answer" hidden id="ans42"><u>s</u>it</p>
+    <p class="pronunciation-answer" hidden id="ans43">har<u>sh</u></p>
+    <p class="pronunciation-answer" hidden id="ans44">a<u>sh</u>ame</p>
+    <p class="pronunciation-answer" hidden id="ans45">S<u>hy</u>am</p>
+    <p class="pronunciation-answer" hidden id="ans46"><u>z</u>ebra</p>
+    <p class="pronunciation-answer" hidden id="ans47">a<u>z</u>ure</p>
+    <p class="pronunciation-answer" hidden id="ans48">sa<u>v</u>e</p>
+    <p class="pronunciation-answer" hidden id="ans49"><u>v</u>erse</p>
+    <p class="pronunciation-answer" hidden id="ans50">angu<u>sht</u></p>
+</div>
+
+<!-- This is modal -->
+<a id="helpButton" class="btn-floating waves-effect waves-light red modal-trigger"><i class="material-icons">help</i></a>
+    
+<div id="helpModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+        <h4><u>How To Use</u></h4>
+    </div>
+        <div class="modal-body">
+        <p>The app is divided into 2 pages. On the first page tap on the Generate button & try to identify the Avesta letter before the answer is shown. On the second page you can test your word skills by playing the game wherein you choose the correct alphabets to form the word shown in English.
+            Switch between the 2 pages by tapping on the top left corner button.
+        </p>
+        <br>
+        <p>While playing the game on the 2nd page if you get stuck, you can tap on the "!" button at top centre to reveal the correct answer.</p>
+        <br>
+        <p>For an optimum experience, install the app by tapping on "Add to Home Screen" in your broswer. (for Safari on iOS devices, tap on Share > Add to home screen)
+        </p>
+        <br>
+        <p>Happy Learning! :)</p>
+        </div>
+    </div>
+</div>
+
+<!-- in below line 'teal darken-1' is single thing. You can use lighten or darken upto 4 shades i think. "z-depth-3" is for shadow, upto 5 avlble. -->
+<a class="btn-large waves-effect waves-light teal darken-1 fade-in z-depth-3" onclick="generateRandom()" id="generateButton">Generate</a> 
+<!-- all this just loading so UX is lagfree -->
+        <img src="img/avestaLetters/2.png" hidden>
+        <img src="img/avestaLetters/3.png" hidden>
+        <img src="img/avestaLetters/4.png" hidden>
+        <img src="img/avestaLetters/5.png" hidden>
+        <img src="img/avestaLetters/6.png" hidden>
+        <img src="img/avestaLetters/7.png" hidden>
+        <img src="img/avestaLetters/8.png" hidden>
+        <img src="img/avestaLetters/9.png" hidden>
+        <img src="img/avestaLetters/10.png" hidden>
+        <img src="img/avestaLetters/11.png" hidden>
+        <img src="img/avestaLetters/12.png" hidden>
+        <img src="img/avestaLetters/14.png" hidden>
+        <img src="img/avestaLetters/15.png" hidden>
+        <img src="img/avestaLetters/16.png" hidden>
+        <img src="img/avestaLetters/17.png" hidden>
+        <img src="img/avestaLetters/18.png" hidden>
+        <img src="img/avestaLetters/19.png" hidden>
+        <img src="img/avestaLetters/20.png" hidden>
+        <img src="img/avestaLetters/21.png" hidden>
+        <img src="img/avestaLetters/22.png" hidden>
+        <img src="img/avestaLetters/23.png" hidden>
+        <img src="img/avestaLetters/24.png" hidden>
+        <img src="img/avestaLetters/25.png" hidden>
+        <img src="img/avestaLetters/26.png" hidden>
+        <img src="img/avestaLetters/27.png" hidden>
+        <img src="img/avestaLetters/28.png" hidden>
+        <img src="img/avestaLetters/29.png" hidden>
+        <img src="img/avestaLetters/30.png" hidden>
+        <img src="img/avestaLetters/31.png" hidden>
+        <img src="img/avestaLetters/32.png" hidden>
+        <img src="img/avestaLetters/33.png" hidden>
+        <img src="img/avestaLetters/34.png" hidden>
+        <img src="img/avestaLetters/35.png" hidden>
+        <img src="img/avestaLetters/36.png" hidden>
+        <img src="img/avestaLetters/37.png" hidden>
+        <img src="img/avestaLetters/38.png" hidden>
+        <img src="img/avestaLetters/39.png" hidden>
+        <img src="img/avestaLetters/40.png" hidden>
+        <img src="img/avestaLetters/41.png" hidden>
+        <img src="img/avestaLetters/42.png" hidden>
+        <img src="img/avestaLetters/43.png" hidden>
+        <img src="img/avestaLetters/44.png" hidden>
+        <img src="img/avestaLetters/45.png" hidden>
+        <img src="img/avestaLetters/46.png" hidden>
+        <img src="img/avestaLetters/47.png" hidden>
+        <img src="img/avestaLetters/48.png" hidden>
+        <img src="img/avestaLetters/49.png" hidden>
+        <img src="img/avestaLetters/50.png" hidden>
+        
+        <!-- now for the transcription asnwers -->
+        <img src="img/transcpAnswers/1.png" hidden>
+        <img src="img/transcpAnswers/2.png" hidden>
+        <img src="img/transcpAnswers/3.png" hidden>
+        <img src="img/transcpAnswers/4.png" hidden>
+        <img src="img/transcpAnswers/5.png" hidden>
+        <img src="img/transcpAnswers/6.png" hidden>
+        <img src="img/transcpAnswers/7.png" hidden>
+        <img src="img/transcpAnswers/8.png" hidden>
+        <img src="img/transcpAnswers/9.png" hidden>
+        <img src="img/transcpAnswers/10.png" hidden>
+        <img src="img/transcpAnswers/11.png" hidden>
+        <img src="img/transcpAnswers/12.png" hidden>
+        <img src="img/transcpAnswers/14.png" hidden>
+        <img src="img/transcpAnswers/15.png" hidden>
+        <img src="img/transcpAnswers/16.png" hidden>
+        <img src="img/transcpAnswers/17.png" hidden>
+        <img src="img/transcpAnswers/18.png" hidden>
+        <img src="img/transcpAnswers/19.png" hidden>
+        <img src="img/transcpAnswers/20.png" hidden>
+        <img src="img/transcpAnswers/21.png" hidden>
+        <img src="img/transcpAnswers/22.png" hidden>
+        <img src="img/transcpAnswers/23.png" hidden>
+        <img src="img/transcpAnswers/24.png" hidden>
+        <img src="img/transcpAnswers/25.png" hidden>
+        <img src="img/transcpAnswers/26.png" hidden>
+        <img src="img/transcpAnswers/27.png" hidden>
+        <img src="img/transcpAnswers/28.png" hidden>
+        <img src="img/transcpAnswers/29.png" hidden>
+        <img src="img/transcpAnswers/30.png" hidden>
+        <img src="img/transcpAnswers/31.png" hidden>
+        <img src="img/transcpAnswers/32.png" hidden>
+        <img src="img/transcpAnswers/33.png" hidden>
+        <img src="img/transcpAnswers/34.png" hidden>
+        <img src="img/transcpAnswers/35.png" hidden>
+        <img src="img/transcpAnswers/36.png" hidden>
+        <img src="img/transcpAnswers/37.png" hidden>
+        <img src="img/transcpAnswers/38.png" hidden>
+        <img src="img/transcpAnswers/39.png" hidden>
+        <img src="img/transcpAnswers/40.png" hidden>
+        <img src="img/transcpAnswers/41.png" hidden>
+        <img src="img/transcpAnswers/42.png" hidden>
+        <img src="img/transcpAnswers/43.png" hidden>
+        <img src="img/transcpAnswers/44.png" hidden>
+        <img src="img/transcpAnswers/45.png" hidden>
+        <img src="img/transcpAnswers/46.png" hidden>
+        <img src="img/transcpAnswers/47.png" hidden>
+        <img src="img/transcpAnswers/48.png" hidden>
+        <img src="img/transcpAnswers/49.png" hidden>
+        <img src="img/transcpAnswers/50.png" hidden>
+        <img src="img/transcpAnswers/bgcolor.jpg" hidden>
+        <!-- running the showButton() function last so that i give time to other images to load firstly. BUT ANYWAY IN JS IVE DISABLED IT -->
+</html>

@@ -1,0 +1,197 @@
+* { /* this helps in preventing that horizontal teeny scroll that inadvertetntly crops up */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color:#708090; /*royalblue, slateblue, slategrey*/
+}
+
+#avestaLetter {
+    position: absolute; 
+    top: 1%; /*absolute touching end of screen doesn't look good*/
+    left: 50%; /* this moves the left edge of the element to horizontal center.*/
+    transform: translate(-50%); /* this moves the image by half its size to the left to correct for the left:50% above*/
+}
+
+#div-trs {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-40%);
+}
+
+#transcription-heading {
+    position: relative;
+    font-family: 'Calibri';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#transcription-answer {
+    position: relative; 
+    transform: translate(0%,25%);
+}
+
+#div-pro {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-67%);
+}
+
+#pronunciation-heading{
+    position: relative;
+    font-family: 'Calibri';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transform: translate(0%,36%);
+}
+
+.pronunciation-answer {
+    position: relative;
+    font-family: 'Verdana'; /* shows underline properly under 'y', at least best of the worst that way */
+    font-size: 40px;
+    transform: translate(0%,75%);
+}
+
+#generateButton {
+    cursor: pointer ;
+    color:white;
+    height: 100px;
+    width: 90%;
+    padding: 25px; /* this was to vertically cetnralize the text on the button (i think 1/4th of 100px height) */
+    font-size: 250%;
+    font-weight: bold;
+    font-family: 'Calibri';
+    outline: none;
+    border-radius: 50px;
+    transition: font-size 1s;
+    /* background-color: black; */
+    position: absolute;
+    bottom: 3%; /*absolute touching end of screen doesn't look good*/
+    left: 50%; /* this moves the left edge of the element to horizontal center*/
+    transform: translate(-50%); /* this moves the image by half its size to the left to correct for the left:50% above*/
+}
+
+/* .btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+} */
+
+
+.fade-in{
+    animation: fade-in 1s;
+    opacity: 1;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.placeholder{
+    border: 100px;
+    background-color: red;
+    max-width: 10vw;
+}
+/* 
+.placeholderImage{
+    max-width: 200%;
+    padding: 0%;
+    margin: 0%;
+    border: 0%;
+} */
+
+#helpButton{
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+  /* The Modal (background) */
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 50px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	position: relative;
+	background-color:#708090;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+	color: black;
+	float: right;
+	font-size: 50px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  .modal-header {
+	font-family: 'Calibri';
+	padding: 2px 16px;
+	/* background-color: #5cb85c; */
+	color: black;
+	text-align: center;
+  }
+  
+  .modal-body {
+	  font-family: 'Calibri';
+	  padding: 2px;
+	  color: black;
+	  margin: 0 0;
+	  font-weight: bold;
+	}
+  
+  .modal-footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+  }

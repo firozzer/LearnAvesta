@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="theme-color" content="#708090">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="stylesheet" href="../css/game.css">
+    <!-- <link rel="icon" href="/img/logo192.png"> not sure what this is for, decomment if probs -->
+    <!-- iOS support, since iOS doesn't pick the logo from manifest file, have to give it specirally here & also the theme specially to be given -->
+    <meta name="apple-mobile-web-app-status-bar" content="#708090">
+    <title>Avesta Game</title>
+</head>
+<body>
+    <div class="big-parent">
+        <div class="theFourSections" id="firstSection">
+            <a id="jumperButton" onclick="jumpToTest()" class="btn-floating waves-effect waves-light red"><i class="material-icons">play_arrow</i></a>
+            <a id="studyButton" href="../index.html" class="btn-floating waves-effect waves-light red"><i class="material-icons">menu_book</i></a>
+            <a id="showAnswerButton" onclick="showCorrectAnswer()" class="btn-floating waves-effect waves-light red"><i class="material-icons">error</i></a>
+            <input type="number" onfocus="this.value=''" name="" id="jumperInput" size="10">
+        </div>
+        <div class="theFourSections", id="secondSection"></div>
+        <div class="theFourSections" id="thirdSection"> </div>
+        <div class="theFourSections" id="fourthSection">
+            <a class="btn-large waves-effect waves-light teal darken-1 z-depth-3 fade-in" onclick="buttonPressed()" id="checkButton">Check</a>
+        </div>
+    </div>  
+
+<!-- This is modal -->
+<a id="helpButton" class="btn-floating waves-effect waves-light red modal-trigger"><i class="material-icons">help</i></a>
+    
+<div id="helpModal" class="modal">
+<!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+        <h4><u>How To Use</u></h4>
+    </div>
+        <div class="modal-body">
+        <p>The app is divided into 2 pages. On the first page tap on the Generate button & try to identify the Avesta letter before the answer is shown. On the second page you can test your word skills by playing the game wherein you choose the correct alphabets to form the word shown in English.
+            Switch between the 2 pages by tapping on the top left corner button.
+        </p>
+        <br>
+        <p>While playing the game on the 2nd page if you get stuck, you can tap on the "!" button at top centre to reveal the correct answer.</p>
+        <br>
+        <p>For an optimum experience, install the app by tapping on "Add to Home Screen" in your broswer. (for Safari on iOS devices, tap on Share > Add to home screen)
+        </p>
+        <br>
+        <p>Happy Learning! :)</p>
+        </div>
+    </div>
+</div>
+      
+
+</body>
+<!-- <script src="../js/jquery.js"></script> -->
+<script src="../js/stolen.js"></script> <!--  Load this first as it contains stuff essential to the other js's -->
+<script src="../js/game.js"></script> <!--  Load this next most priority as it generates the inital HTML-->
+<script src="../js/game2.js"></script>
+<script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script> <!--This   is needed to make photo.animate() inside the flip function in game2.js work on Safari. Otherwise natively Safari doesn't have any .animate() function -->
+
+</html>
