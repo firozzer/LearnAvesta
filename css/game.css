@@ -62,11 +62,9 @@ html{
 }
 
 #firstSection {
-	display: flex; /* this affects the elements inside this class */
-	flex-direction: row-reverse;
-	align-items: center; /* this affects the elements inside this class */
-	justify-content: center; /* this affects the elements inside this class */
-	flex-wrap: wrap;
+	display: block; /* this affects the elements inside this class */
+	text-align: center;
+	margin-top: 20px;
 	height: 15vh;
 	/* border: 5px solid yellow; */
 }
@@ -104,7 +102,7 @@ html{
 .AvestaLetters{
 	font-family: Jamshed;
 	font-size: min(14vw,70px); /*Exp1a - The pixels here &... min(14vw,125px)*/
-	border:  5px solid min(2vw,7px); 
+	border:  min(2vw,7px); /* this is an invisble border that is MAYBE helping in easier touching/clicking on the letter*/
 	margin: 0;
 }
 
