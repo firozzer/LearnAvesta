@@ -342,7 +342,7 @@ function restartStraightTest() {
     });
 
     let totalUniqueAvestaLettersInTest = tempList.length //capturing the correct Avesta unique letters length as later on will generate elements on its basis. Minimum i will show 10 & max the number of this variable.
-    console.log("temp list is ", totalUniqueAvestaLettersInTest)
+    console.log("Tot Unique Avesta Letters in Test answer: ", totalUniqueAvestaLettersInTest)
     thirdSection = document.getElementById("thirdSection")
     for (let index = 0; index < 10 || index < totalUniqueAvestaLettersInTest; index++) { // generating number of containers basis totalUniqueAve... var.
         let divTemp = document.createElement('div');
@@ -357,7 +357,7 @@ function restartStraightTest() {
     }
 
     shuffle(tempList)
-    console.log(tempList)
+    // console.log(tempList)
 
     let heading = document.createElement("h4")
     heading.textContent = tests[randomNo]["englishQ"]
@@ -466,7 +466,7 @@ function restartTest() {
     });
 
     let totalUniqueAvestaLettersInTest = tempList.length //capturing the correct Avesta unique letters length as later on will generate elements on its basis. Minimum i will show 10 & max the number of this variable.
-    console.log("temp list is ", totalUniqueAvestaLettersInTest)
+    console.log("Tot Unique Avesta Letters in Test answer: ", totalUniqueAvestaLettersInTest)
     thirdSection = document.getElementById("thirdSection")
     for (let index = 0; index < 10 || index < totalUniqueAvestaLettersInTest; index++) { // generating number of containers basis totalUniqueAve... var.
         let divTemp = document.createElement('div');
@@ -481,7 +481,7 @@ function restartTest() {
     }
 
     shuffle(tempList)
-    console.log(tempList)
+    // console.log(tempList)
 
     let heading = document.createElement("h4")
     heading.textContent = tests[randomNo]["englishQ"]

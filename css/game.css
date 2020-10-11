@@ -80,7 +80,7 @@ html{
 
 #thirdSection {
 	width: 100vw;
-	height: 60vh;
+	height: 56vh;
 	display: flex; 
 	flex-wrap: wrap; /* this affects the elements inside this class */
 	align-items: center; /* this affects the elements inside this class vertical*/1

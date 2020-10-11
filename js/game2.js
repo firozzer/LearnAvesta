@@ -66,6 +66,10 @@ const flip = (avestaLetter, settings) => {
 const move = (avestaLetter) => {
 	const id = Math.random(); // random number used to link the avestaLetter to its container (used in the putback function)
 	const container = avestaLetter.closest(".thirdSectionElements"); // the selected avestaLetter's container element
+	const siblings = [...destination.querySelectorAll(".AvestaLetters")].filter(
+		(sib) => sib !== avestaLetter
+	); // find the other avestaLetter elements in the destination so we can animate them when the selected avestaLetter is inserted
+
 	let rect = avestaLetter.getBoundingClientRect(); // selected avestaLetter's DOM rect
 	let first, last; // containers for the initial and final (First and Last) positions of the element
 
@@ -77,18 +81,37 @@ const move = (avestaLetter) => {
 
 	// assign the initial top/left px values of the avestaLetter -> move the avestaLetter to the destination -> recaculate the the avestaLetter's DOM rect in new position -> assign the final top/left values
 	first = { top: rect.top, left: rect.left };
+
+	// get the initial top/left px values for each sibling
+	siblings.forEach((sib) => {
+		let rect = sib.getBoundingClientRect();
+		// I am assigning this value as a property of the element object because trying to keep a
+		// variable linked to this element inside a loop that we can use later  in a different loop
+		// would be a real big pain. Best practice is not to modify objects/classes you don't own,
+		// so to be safe and avoid overwriting an existing property value (ele.first or ele.last)
+		// I am prefixing the property name with __
+		sib.__first = { top: rect.top, left: rect.left };
+	});
+
 	destination.insertAdjacentElement("beforeend", avestaLetter); //Exp1a - the element is moved to the new position here only. Then when the animation runs in (b), that just moves it back & does it in a cool way. This original movement happens in a jiffy so you don't notice it.
 	rect = avestaLetter.getBoundingClientRect();
 	last = { top: rect.top, left: rect.left };
 
+	// get the final top/left px values for each sibling
+	siblings.forEach((sib) => {
+		let rect = sib.getBoundingClientRect();
+		sib.__last = { top: rect.top, left: rect.left };
+	});
+
 	// send avestaLetter, and its caculated vales to the flip funciton
 	flip(avestaLetter, { first, last });
+	siblings.forEach((sib) => flip(sib, { first: sib.__first, last: sib.__last })); // animate the siblings
 };
 
 const putback = (avestaLetter) => {
 	const id = avestaLetter.dataset.id; // get the ID of the current avestaLetter
 	const container = origin.querySelector(`[data-id="${id}"]`); // query for the container w/ the matching ID
-	const siblings = [...destination.querySelectorAll(".avestaLetter")].filter(
+	const siblings = [...destination.querySelectorAll(".AvestaLetters")].filter(
 		(sib) => sib !== avestaLetter
 	); // find the other avestaLetter elements in the destination so we can animate them when the selected avestaLetter is put back
 
@@ -121,9 +144,6 @@ const putback = (avestaLetter) => {
 		sib.__last = { top: rect.top, left: rect.left };
 	});
 
-	avestaLetter.classList.remove("secondSectionavestaLetters")
-	avestaLetter.classList.add("thirdSectionavestaLetters")
-	
 	flip(avestaLetter, { first, last }); // animate the avestaLetter
 
 	siblings.forEach((sib) => flip(sib, { first: sib.__first, last: sib.__last })); // animate the siblings
