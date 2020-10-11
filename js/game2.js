@@ -63,7 +63,7 @@ const flip = (avestaLetter, settings) => {
 };	
 
 // move the photo from the origin to the destination
-const move = (avestaLetter) => {
+const move = (avestaLetter, animationInitiatedByShowCorrectAnswer=false) => {
 	const id = Math.random(); // random number used to link the avestaLetter to its container (used in the putback function)
 	const container = avestaLetter.closest(".thirdSectionElements"); // the selected avestaLetter's container element
 	const siblings = [...destination.querySelectorAll(".AvestaLetters")].filter(
@@ -105,6 +105,7 @@ const move = (avestaLetter) => {
 
 	// send avestaLetter, and its caculated vales to the flip funciton
 	flip(avestaLetter, { first, last });
+	if (animationInitiatedByShowCorrectAnswer === true) return; // if user clicks "showAnswer" then sibling animation to be skipped as it causes weird animation.
 	siblings.forEach((sib) => flip(sib, { first: sib.__first, last: sib.__last })); // animate the siblings
 };
 

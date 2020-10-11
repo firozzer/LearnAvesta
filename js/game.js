@@ -559,6 +559,8 @@ function buttonPressed() { //this gets fired everytime the #checkButton is press
 }
 
 function showCorrectAnswer() {
+    animationInitiatedByShowCorrectAnswer = true;
+
     let lettersInSecondSection = document.getElementById("secondSection") // select the second section
     for (let index = lettersInSecondSection.childElementCount-1; index >= 0; index--) {
         putback(lettersInSecondSection.children[index]) // then run all the child elements of second section (letters submitted by user) through the putback() function to send back to 3rd section
@@ -572,7 +574,7 @@ function showCorrectAnswer() {
         for (let i = 0; i < document.getElementsByClassName("thirdSectionElements").length; i++) {
             avlbleLetters = document.querySelectorAll(".thirdSectionElements > .AvestaLetters");
             if (avlbleLetters[i].textContent === element) {
-                if (avlbleLetters[i] != null) move(avlbleLetters[i]);
+                if (avlbleLetters[i] != null) move(avlbleLetters[i],animationInitiatedByShowCorrectAnswer);
                 break
             }
         }
