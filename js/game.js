@@ -466,7 +466,7 @@ function restartTest() {
     });
 
     let totalUniqueAvestaLettersInTest = tempList.length //capturing the correct Avesta unique letters length as later on will generate elements on its basis. Minimum i will show 10 & max the number of this variable.
-    console.log("Tot Unique Avesta Letters in Test answer: ", totalUniqueAvestaLettersInTest)
+    console.log("Min no of Avesta letter options to be shown: ", totalUniqueAvestaLettersInTest)
     thirdSection = document.getElementById("thirdSection")
     for (let index = 0; index < 10 || index < totalUniqueAvestaLettersInTest; index++) { // generating number of containers basis totalUniqueAve... var.
         let divTemp = document.createElement('div');
@@ -564,18 +564,6 @@ function showCorrectAnswer() {
         putback(lettersInSecondSection.children[index]) // then run all the child elements of second section (letters submitted by user) through the putback() function to send back to 3rd section
 
     }
-    
-    checkButton = document.getElementById("checkButton")
-    checkButton.text = "Next"
-    // checkButton.text = "Courage Comrade!"
-    // checkButton.classList.add("pulse")
-    // checkButton.classList.remove("teal")
-    // checkButton.classList.add("blue")
-    // setTimeout(function() {
-    //     checkButton.classList.remove("pulse")
-    //     checkButton.classList.remove("blue")
-    //     checkButton.classList.add("teal")
-    // }, 1000) 
 
     document.getElementById('showAnswerButton').classList.add("disabled")
     // document.getElementById('jumperButton').classList.add("disabled")
@@ -608,7 +596,7 @@ let oldRandomNos = []
 restartTest(); // if you switch between this & straight test, need to change quite a few things between each. Mainly noOfOldTests becomes a 0 in other & also change which function gets called in buttonPressed function.
 // restartStraightTest();
 
-const showHelpModal = () => {
+const installShowHelpModal = () => {
         // Get the modal
     var modal = document.getElementById("helpModal");
 
@@ -635,7 +623,7 @@ const showHelpModal = () => {
     }}
     
 }
-showHelpModal();
+installShowHelpModal();
 
 async function showSynonymsIfPresent() {  // deleting everything from third section to show the multiple synonyms in Avesta in case synonyms are there.
     await sleep(1000);
@@ -684,4 +672,7 @@ async function showSynonymsIfPresent() {  // deleting everything from third sect
             thirdSection.appendChild(pTemp2);
         }
     }
+
+    checkButton = document.getElementById("checkButton") // changing this to next in the very end because if user taps 'showanswer' & then immediately taps "Next" buttton it causes synonyms to appear with "Check" button.
+    checkButton.text = "Next"
 }
