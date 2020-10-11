@@ -256,7 +256,8 @@ src: url("../res/Jamshed.ttf");
 	padding: 2px;
 	color: black;
 	margin: 0 0;
-	font-weight: bolder;
+	font-weight: bold;
+	font-size: 1.7vh;
 }
 
 .modal-footer {
