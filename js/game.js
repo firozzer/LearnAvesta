@@ -501,7 +501,7 @@ function buttonPressed() { //this gets fired everytime the #checkButton is press
     testPassed = false;
     let button = document.getElementById("checkButton")
     if (button.text == "Next") {
-        button.text = "Check" // need to do this immediately to prevent multiple page loads if user taps Next like crazy
+        button.text = "Check" // need to do this immediately to prevent multiple page loads if user taps Next like crazy. EDIT - no succ, still user can bypass.
         console.log("next page")
         restartTest();
         // restartStraightTest();
