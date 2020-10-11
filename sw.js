@@ -1,4 +1,4 @@
-// just a placeholder comment to ensure cache gets refresh. qz
+// just a placeholder comment to ensure cache gets refresh. vvv
 
 self.addEventListener("install", e => {
 e.waitUntil(
