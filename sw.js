@@ -1,4 +1,4 @@
-// just a placeholder comment to ensure cache gets refresh. qanonmesdfasag..s
+// just a placeholder comment to ensure cache gets refresh. qanonmespo
 
 self.addEventListener("install", e => {
 e.waitUntil(
