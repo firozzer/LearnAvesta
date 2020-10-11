@@ -374,6 +374,9 @@ function restartStraightTest() {
 }
 
 function restartTest() {
+    document.getElementById("checkButton").text = "Check" // need this to run when in development i type in a new test no immediately after clicking on showAnswer
+    document.getElementById('showAnswerButton').classList.remove("disabled") // need this to run when in development i type in a new test no immediately after clicking on showAnswer
+    
     setTimeout(function() {
         avestaLetters = document.querySelectorAll(".AvestaLetters"); // nodeList of all the avestaLetters in the origin. since it is not declared, it becomes a global variable. Capturing this after sometime as the app.js insertavestaLetters() function is generating these html img elements firstly.
 	    avestaLetters.forEach((avestaLetter) => {
@@ -417,9 +420,6 @@ function restartTest() {
             // continuing since it must be first time opening page and can't find the elements it is trying to delete
         }
     }
-
-    document.getElementById("checkButton").text = "Check" // need this to run when in development i type in a new test no immediately after clicking on showAnswer
-    document.getElementById('showAnswerButton').classList.remove("disabled") // need this to run when in development i type in a new test no immediately after clicking on showAnswer
 
     while(true){ //generating the random number which will be the Test Number
         randomNo = Math.floor(Math.random() * lengthOfTests)+1;
