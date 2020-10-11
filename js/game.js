@@ -566,6 +566,7 @@ function showCorrectAnswer() {
     }
     
     checkButton = document.getElementById("checkButton")
+    checkButton.text = "Next"
     // checkButton.text = "Courage Comrade!"
     // checkButton.classList.add("pulse")
     // checkButton.classList.remove("teal")
@@ -574,7 +575,6 @@ function showCorrectAnswer() {
     //     checkButton.classList.remove("pulse")
     //     checkButton.classList.remove("blue")
     //     checkButton.classList.add("teal")
-    checkButton.text = "Next"
     // }, 1000) 
 
     document.getElementById('showAnswerButton').classList.add("disabled")
