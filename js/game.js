@@ -499,8 +499,9 @@ function restartTest() {
 
 function buttonPressed() { //this gets fired everytime the #checkButton is pressed
     testPassed = false;
-    let buttonStatus = document.getElementById("checkButton").text
-    if (buttonStatus == "Next") {
+    let button = document.getElementById("checkButton")
+    if (button.text == "Next") {
+        button.text = "Check" // need to do this immediately to prevent multiple page loads if user taps Next like crazy
         console.log("next page")
         restartTest();
         // restartStraightTest();
@@ -648,9 +649,8 @@ const installHelpModal = () => {
 installHelpModal();
 
 async function showSynonymsIfPresent() {  // deleting everything from third section to show the multiple synonyms in Avesta in case synonyms are there.
-    await sleep(1000);
-
     if (tests[randomNo]['avestaAns'].length > 1) { 
+        await sleep(1000);
         console.log("Note: This word has multiple Avesta translations, as .");
         let thirdSection = document.querySelector("#thirdSection");
         for (let index = thirdSection.childElementCount-1; index >= 0; index--) { //getting rid of everything from third section
@@ -694,7 +694,5 @@ async function showSynonymsIfPresent() {  // deleting everything from third sect
             thirdSection.appendChild(pTemp2);
         }
     }
-
-    checkButton = document.getElementById("checkButton") // changing this to next in the very end because if user taps 'showanswer' & then immediately taps "Next" buttton it causes synonyms to appear with "Check" button.
-    checkButton.text = "Next"
+    document.getElementById("checkButton").text = "Next" // changing this to next in the very end because if user taps 'showanswer' & then immediately taps "Next" buttton it causes synonyms to appear with "Check" button.
 }
