@@ -1,4 +1,5 @@
 git add .
-git commit -m "added exit animation on Help Modal"
+set /p commit_msg="Commit message: "
+git commit -m "%commit_msg%"
 git push origin main
 PAUSE
