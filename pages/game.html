@@ -33,14 +33,14 @@
 </head>
 <body>
     <div class="big-parent">
-        <div class="theFourSections noselect" id="firstSection">
+        <div class="theFourSections noselect" id="firstSection"> <!-- necessary to add noselect to heading because if by chance user selects the heading even once, it keeps getting autoselected as the user taps on the avesta letters. -->
             <!-- <a id="jumperButton" onclick="jumpToTest()" class="btn-floating waves-effect waves-light red"><i class="material-icons">play_arrow</i></a> -->
             <a id="studyButton" href="../index.html" class="btn-floating waves-effect waves-light red"><i class="material-icons">menu_book</i></a>
             <a id="showAnswerButton" onclick="showCorrectAnswer()" class="btn-floating waves-effect waves-light red"><i class="material-icons">error</i></a>
             <!-- <input type="number" onfocus="this.value=''" name="" id="jumperInput" size="10"> -->
         </div>
-        <div class="theFourSections noselect", id="secondSection"></div>
-        <div class="theFourSections noselect" id="thirdSection"> </div>
+        <div class="theFourSections noselect", id="secondSection"></div>  <!-- necessary to noselect this parent element as well to avoid the google popups  -->
+        <div class="theFourSections noselect" id="thirdSection"> </div> <!-- necessary to noselect this parent element as well to avoid the google popups  -->
         <div class="theFourSections" id="fourthSection">
             <a class="btn-large waves-effect waves-light teal darken-1 z-depth-3 fade-in" onclick="buttonPressed()" id="checkButton">Check</a>
         </div>
