@@ -62,9 +62,12 @@ html{
 }
 
 #firstSection {
-	display: block; /* using block here instead of flex as otherwise multiline headings get misaligned to the left */
+	display: flex; /* this affects the elements inside this class */
+	flex-direction: row-reverse;
+	align-items: center; /* this affects the elements inside this class */
+	justify-content: center; /* this affects the elements inside this class */
+	flex-wrap: wrap;
 	height: 15vh;
-	text-align: center; 
 	/* border: 5px solid yellow; */
 }
 #secondSection {
@@ -147,7 +150,6 @@ src: url("../res/Jamshed.ttf");
 		  -ms-user-select: none; /* Internet Explorer/Edge */
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
-	pointer-events: none;
   }
 
   /* The Modal (background) */
