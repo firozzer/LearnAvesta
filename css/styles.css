@@ -235,7 +235,7 @@ html{
 	color: black;
 	margin: 0 0;
 	font-weight: bold;
-	font-size: 1.7vh;
+	font-size: max(1.7vh,1.4vw);
 }
 
 .modal-footer {
