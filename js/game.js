@@ -615,22 +615,33 @@ const installHelpModal = () => {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modalContent.style.animationName = "animateExit"
+        modalContent.style.webkitAnimationName = "animateExit"
+        modal.style.animationName = "bgExit"
+        modal.style.webkitAnimationName = "bgExit"
         setTimeout(() => {
             modal.style.display = "none"; // need to set to none again otherwise it becomes visible again at orig position
             modalContent.style.animationName = "animateEntry"
-        }, 360); // my animation is 400ms, so this is 360 ms jic js gets delayed somehow, atleast it doesn't flicker back
+            modalContent.style.webkitAnimationName = "animateEntry"
+            modal.style.animationName = "bgEntry"
+            modal.style.webkitAnimationName = "bgEntry"
+        }, 470); // my animation is 500ms, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modalContent.style.animationName = "animateExit"
+            modalContent.style.webkitAnimationName = "animateExit"
+            modal.style.animationName = "bgExit"
+            modal.style.webkitAnimationName = "bgExit"
             setTimeout(() => {
                 modal.style.display = "none"; // need to set to none again otherwise it becomes visible again at orig position
                 modalContent.style.animationName = "animateEntry"
-            }, 360); // my animation is 400ms, so this is 360 ms jic js gets delayed somehow, atleast it doesn't flicker back
+                modalContent.style.webkitAnimationName = "animateEntry"
+                modal.style.animationName = "bgEntry"
+                modal.style.webkitAnimationName = "bgEntry"
+            }, 470); // my animation is 500ms, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
     }}
-    
 }
 installHelpModal();
 
