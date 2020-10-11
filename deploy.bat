@@ -1,4 +1,4 @@
 git add .
-git commit -m "sibling animation to the destination elements added"
+git commit -m "added exit animation on Help Modal"
 git push origin main
 PAUSE

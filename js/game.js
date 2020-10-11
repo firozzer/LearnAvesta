@@ -596,7 +596,7 @@ let oldRandomNos = []
 restartTest(); // if you switch between this & straight test, need to change quite a few things between each. Mainly noOfOldTests becomes a 0 in other & also change which function gets called in buttonPressed function.
 // restartStraightTest();
 
-const installShowHelpModal = () => {
+const installHelpModal = () => {
         // Get the modal
     var modal = document.getElementById("helpModal");
 
@@ -605,25 +605,34 @@ const installShowHelpModal = () => {
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
+    var modalContent = document.getElementsByClassName("modal-content")[0]; // need this to apply the exit animation on on pressing cross or outside.
 
     // When the user clicks the button, open the modal 
     btn.onclick = function() {
-    modal.style.display = "block";
+        modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-    modal.style.display = "none";
+        modalContent.style.animationName = "animateExit"
+        setTimeout(() => {
+            modal.style.display = "none"; // need to set to none again otherwise it becomes visible again at orig position
+            modalContent.style.animationName = "animateEntry"
+        }, 360); // my animation is 400ms, so this is 360 ms jic js gets delayed somehow, atleast it doesn't flicker back
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+        if (event.target == modal) {
+            modalContent.style.animationName = "animateExit"
+            setTimeout(() => {
+                modal.style.display = "none"; // need to set to none again otherwise it becomes visible again at orig position
+                modalContent.style.animationName = "animateEntry"
+            }, 360); // my animation is 400ms, so this is 360 ms jic js gets delayed somehow, atleast it doesn't flicker back
     }}
     
 }
-installShowHelpModal();
+installHelpModal();
 
 async function showSynonymsIfPresent() {  // deleting everything from third section to show the multiple synonyms in Avesta in case synonyms are there.
     await sleep(1000);

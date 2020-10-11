@@ -174,21 +174,31 @@ src: url("../res/Jamshed.ttf");
 	border: 1px solid #888;
 	width: 80%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-	-webkit-animation-name: animatetop;
+	-webkit-animation-name: animateEntry;
 	-webkit-animation-duration: 0.4s;
-	animation-name: animatetop;
+	animation-name: animateEntry;
 	animation-duration: 0.4s
   }
   
-  /* Add Animation */
-  @-webkit-keyframes animatetop {
+  /* Add entry Animation */
+  @-webkit-keyframes animateEntry {
 	from {top:-300px; opacity:0} 
 	to {top:0; opacity:1}
   }
   
-  @keyframes animatetop {
+  @keyframes animateEntry {
 	from {top:-300px; opacity:0}
 	to {top:0; opacity:1}
+  }
+  /* Add exit Animation */
+  @-webkit-keyframes animateExit {
+	from {top:0; opacity:1} 
+	to {top:-300px; opacity:0}
+  }
+  
+  @keyframes animateExit {
+	from {top:0; opacity:1}
+	to {top:-300px; opacity:0}
   }
   
   /* The Close Button */
@@ -201,7 +211,7 @@ src: url("../res/Jamshed.ttf");
   
   .close:hover,
   .close:focus {
-	color: #000;
+	color: white;
 	text-decoration: none;
 	cursor: pointer;
   }
