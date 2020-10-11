@@ -124,6 +124,7 @@ html{
 #checkButton{
 	width: 50vw;
 	margin-bottom: 5px;
+	margin-top: -50px; /* because that Google search comes up sometimes, moving up the check button */
 }
 
 .fade-in{
