@@ -1,4 +1,4 @@
-// just a placeholder comment to ensure cache gets refresh. qanonmespo
+// just a placeholder comment to ensure cache gets refresh. qanonmaq
 
 self.addEventListener("install", e => {
 e.waitUntil(

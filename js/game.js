@@ -566,16 +566,16 @@ function showCorrectAnswer() {
     }
     
     checkButton = document.getElementById("checkButton")
-    checkButton.text = "Courage Comrade!"
-    checkButton.classList.add("pulse")
-    checkButton.classList.remove("teal")
-    checkButton.classList.add("blue")
-    setTimeout(function() {
-        checkButton.classList.remove("pulse")
-        checkButton.classList.remove("blue")
-        checkButton.classList.add("teal")
-        checkButton.text = "Next"
-    }, 1000) 
+    // checkButton.text = "Courage Comrade!"
+    // checkButton.classList.add("pulse")
+    // checkButton.classList.remove("teal")
+    // checkButton.classList.add("blue")
+    // setTimeout(function() {
+    //     checkButton.classList.remove("pulse")
+    //     checkButton.classList.remove("blue")
+    //     checkButton.classList.add("teal")
+    checkButton.text = "Next"
+    // }, 1000) 
 
     document.getElementById('showAnswerButton').classList.add("disabled")
     // document.getElementById('jumperButton').classList.add("disabled")
