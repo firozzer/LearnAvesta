@@ -164,9 +164,9 @@ src: url("../res/Jamshed.ttf");
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 	-webkit-animation-name: bgEntry;
-	-webkit-animation-duration: 0.5s;
+	-webkit-animation-duration: 0.3s;
 	animation-name: bgEntry;
-	animation-duration: 0.5s;
+	animation-duration: 0.3s;
   }
   
 /* Modal Content */
@@ -181,9 +181,9 @@ src: url("../res/Jamshed.ttf");
 	width: 90%;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 	-webkit-animation-name: animateEntry;
-	-webkit-animation-duration: 0.5s;
+	-webkit-animation-duration: 0.3s;
 	animation-name: animateEntry;
-	animation-duration: 0.5s
+	animation-duration: 0.3s
 }
 
 /* Add entry Animation */
@@ -257,7 +257,7 @@ src: url("../res/Jamshed.ttf");
 	color: black;
 	margin: 0 0;
 	font-weight: bold;
-	font-size: max(1.7vh,1.4vw);
+	font-size: max(1.7vh,1.4vw); /* vh height suitable for mobiles, vw for pc & ipad */
 }
 
 .modal-footer {

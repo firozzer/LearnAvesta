@@ -111,7 +111,7 @@ span.onclick = function() {
         modalContent.style.webkitAnimationName = "animateEntry"
         modal.style.animationName = "bgEntry"
         modal.style.webkitAnimationName = "bgEntry"
-    }, 470); // my animation is 500ms, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
+    }, 270); // my animation is x, so this is 270 ms jic js gets delayed somehow, atleast it doesn't flicker back
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -127,7 +127,7 @@ window.onclick = function(event) {
             modalContent.style.webkitAnimationName = "animateEntry"
             modal.style.animationName = "bgEntry"
             modal.style.webkitAnimationName = "bgEntry"
-        }, 470); // my animation is 500ms, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
+        }, 270); // my animation is x, so this is 270 ms jic js gets delayed somehow, atleast it doesn't flicker back
 }}
 }
 
