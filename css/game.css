@@ -256,7 +256,7 @@ src: url("../res/Jamshed.ttf");
 	padding: 2px;
 	color: black;
 	margin: 0 0;
-	font-weight: bold;
+	/* font-weight: bold; */
 	font-size: max(1.7vh,1.4vw); /* vh height suitable for mobiles, vw for pc & ipad */
 }
 
