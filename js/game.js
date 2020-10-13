@@ -438,7 +438,7 @@ function restartTest() {
     }
 
     // document.getElementById("jumperInput").value = randomNo
-
+    randomNo = 100
     let tempStr1 = ""
     tests[randomNo]['avestaAns'][0].forEach(element => {
         let theKey = Object.keys(avestaDict).find(key => avestaDict[key] === element);
@@ -560,7 +560,8 @@ function buttonPressed() { //this gets fired everytime the #checkButton is press
 }
 
 function showCorrectAnswer() {
-    animationInitiatedByShowCorrectAnswer = true;
+    animationInitiatedByShowCorrectAnswer = true; // if this is true, then i'm disabling sibling animation in game2.js as it glitches if all move together
+    document.getElementById("checkButton").text = "Next"
 
     let lettersInSecondSection = document.getElementById("secondSection") // select the second section
     for (let index = lettersInSecondSection.childElementCount-1; index >= 0; index--) {
@@ -650,7 +651,7 @@ installHelpModal();
 
 async function showSynonymsIfPresent() {  // deleting everything from third section to show the multiple synonyms in Avesta in case synonyms are there.
     if (tests[randomNo]['avestaAns'].length > 1) { 
-        await sleep(1000);
+        // await sleep(1000);
         console.log("Note: This word has multiple Avesta translations, as .");
         let thirdSection = document.querySelector("#thirdSection");
         for (let index = thirdSection.childElementCount-1; index >= 0; index--) { //getting rid of everything from third section
@@ -694,5 +695,4 @@ async function showSynonymsIfPresent() {  // deleting everything from third sect
             thirdSection.appendChild(pTemp2);
         }
     }
-    document.getElementById("checkButton").text = "Next" // changing this to next in the very end because if user taps 'showanswer' & then immediately taps "Next" buttton it causes synonyms to appear with "Check" button.
 }
