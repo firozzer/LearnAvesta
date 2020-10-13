@@ -438,7 +438,7 @@ function restartTest() {
     }
 
     // document.getElementById("jumperInput").value = randomNo
-    randomNo = 100
+    
     let tempStr1 = ""
     tests[randomNo]['avestaAns'][0].forEach(element => {
         let theKey = Object.keys(avestaDict).find(key => avestaDict[key] === element);
