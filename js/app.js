@@ -85,38 +85,22 @@ async function generateRandom(){
 
 const installHelpModal = () => {
     // Get the modal
-var modal = document.getElementById("helpModal");
+    var modal = document.getElementById("helpModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("helpButton");
+    // Get the button that opens the modal
+    var btn = document.getElementById("helpButton");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-var modalContent = document.getElementsByClassName("modal-content")[0]; // need this to apply the exit animation on on pressing cross or outside.
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var modalContent = document.getElementsByClassName("modal-content")[0]; // need this to apply the exit animation on on pressing cross or outside.
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modalContent.style.animationName = "animateExit"
-    modalContent.style.webkitAnimationName = "animateExit"
-    modal.style.animationName = "bgExit"
-    modal.style.webkitAnimationName = "bgExit"
-    setTimeout(() => {
-        modal.style.display = "none"; // need to set to none again otherwise it becomes visible again at orig position
-        modalContent.style.animationName = "animateEntry"
-        modalContent.style.webkitAnimationName = "animateEntry"
-        modal.style.animationName = "bgEntry"
-        modal.style.webkitAnimationName = "bgEntry"
-    }, 270); // my animation is x, so this is 270 ms jic js gets delayed somehow, atleast it doesn't flicker back
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
         modalContent.style.animationName = "animateExit"
         modalContent.style.webkitAnimationName = "animateExit"
         modal.style.animationName = "bgExit"
@@ -127,8 +111,24 @@ window.onclick = function(event) {
             modalContent.style.webkitAnimationName = "animateEntry"
             modal.style.animationName = "bgEntry"
             modal.style.webkitAnimationName = "bgEntry"
-        }, 270); // my animation is x, so this is 270 ms jic js gets delayed somehow, atleast it doesn't flicker back
-}}
+        }, 470); // my animation is x, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modalContent.style.animationName = "animateExit"
+            modalContent.style.webkitAnimationName = "animateExit"
+            modal.style.animationName = "bgExit"
+            modal.style.webkitAnimationName = "bgExit"
+            setTimeout(() => {
+                modal.style.display = "none"; // need to set to none again otherwise it becomes visible again at orig position
+                modalContent.style.animationName = "animateEntry"
+                modalContent.style.webkitAnimationName = "animateEntry"
+                modal.style.animationName = "bgEntry"
+                modal.style.webkitAnimationName = "bgEntry"
+            }, 470); // my animation is x, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
+    }}
 }
 
 setTimeout(() => { // doing after sometime as otherwise it is not able to locate the elements
