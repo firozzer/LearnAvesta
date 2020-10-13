@@ -175,7 +175,7 @@ src: url("../res/Jamshed.ttf");
 	background-color:#708090;
 	top: 50vh;
 	left: 50vw;
-	transform: translate(-50%,-50%); /*entry: -170 inviisible, so -250%. Exit: 70 invisible, so 150%.*/
+	transform: translate(-50%,-50%);
 	padding: 0;
 	border: 1px solid #888;
 	width: 90%;
@@ -183,18 +183,18 @@ src: url("../res/Jamshed.ttf");
 	-webkit-animation-name: animateEntry;
 	-webkit-animation-duration: 0.5s;
 	animation-name: animateEntry;
-	animation-duration: 0.5s;
+	animation-duration: 0.5s
 }
 
 /* Add entry Animation */
 @-webkit-keyframes animateEntry {
-	from {transform: translate(-50%,-250%); opacity:0} /* using this instead of top:0vh; to top:50vh as fromer is less resource intensive than latter. Latter causes lag on some devices.*/
-	to {transform: translate(-50%,-50%); opacity:1}
+	from {opacity:0}
+	to {opacity:1}
 }
 
 @keyframes animateEntry {
-	from {transform: translate(-50%,-250%); opacity:0} /* using this instead of top:0vh; to top:50vh as fromer is less resource intensive than latter. Latter causes lag on some devices.*/
-	to {transform: translate(-50%,-50%); opacity:1}
+	from {opacity:0}
+	to {opacity:1}
 }
 
 @-webkit-keyframes bgEntry {
@@ -209,13 +209,13 @@ src: url("../res/Jamshed.ttf");
 
 /* Add exit Animation */
 @-webkit-keyframes animateExit {
-	from {transform: translate(-50%,-50%); opacity:1}
-	to {transform: translate(-50%,150%); opacity:0}
+	from {opacity:1}
+	to {opacity:0}
 }
 	
 @keyframes animateExit {
-	from {transform: translate(-50%,-50%); opacity:1}
-	to {transform: translate(-50%,150%); opacity:0}
+	from {opacity:1}
+	to {opacity:0}
 }
 	
 @-webkit-keyframes bgExit {
