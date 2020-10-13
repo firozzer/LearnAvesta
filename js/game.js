@@ -627,7 +627,7 @@ const installHelpModal = () => {
             modalContent.style.webkitAnimationName = "animateEntry"
             modal.style.animationName = "bgEntry"
             modal.style.webkitAnimationName = "bgEntry"
-        }, 270); // my animation is x, so this is 270 ms jic js gets delayed somehow, atleast it doesn't flicker back
+        }, 470); // my animation is x, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
     }
 
     // When the user clicks anywhere outside of the modal, close it
@@ -643,7 +643,7 @@ const installHelpModal = () => {
                 modalContent.style.webkitAnimationName = "animateEntry"
                 modal.style.animationName = "bgEntry"
                 modal.style.webkitAnimationName = "bgEntry"
-            }, 270); // my animation is x, so this is 270 ms jic js gets delayed somehow, atleast it doesn't flicker back
+            }, 470); // my animation is x, so this is 470 ms jic js gets delayed somehow, atleast it doesn't flicker back
     }}
 }
 installHelpModal();
